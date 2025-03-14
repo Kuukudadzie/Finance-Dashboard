@@ -20,5 +20,5 @@ This Power BI dashboard provides an interactive **financial performance analysis
 
 ## ✨ Author  
 👤 **Benjamin Mensah Dadzie**  
-📩 Email: Huuhuudadzie@gmail.com 
+📩 Email: kuukuudadzie@gmail.com 
 🔗 [LinkedIn Profile](https://www.linkedin.com/in/benmendadzie/)  
