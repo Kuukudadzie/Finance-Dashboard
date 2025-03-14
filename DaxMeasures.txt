@@ -1,0 +1,43 @@
+#DAX
+
+1. # Transaction = COUNTROWS(financials) 
+
+2. Canada Transaction = 
+    CALCULATE( [# Transaction],financials[Country] = "canada")
+
+3. Conditional Formatting = 
+    VAR VProfit = [Total Profit]
+
+
+    RETURN
+        SWITCH(
+            TRUE(),
+            VProfit>0,"#8250C4",
+            VProfit<0,"#E7553D"
+        )
+
+4. Cost Goods Sold = SUMX(financials,financials[Units Sold]*financials[Manufacturing Price])
+
+5. Gross Sales = SUMX(financials,financials[Units Sold]*financials[Sale Price])
+
+6. Net Sales = [Gross Sales]-[Total Discount]
+
+7. Profit Negative = 
+    VAR VProfit = [Total Profit]
+    VAR VResult = IF(VProfit<0,VProfit,0)
+
+    RETURN 
+    Vresult
+
+
+ 8. Profit Positive = 
+    VAR VProfit = [Total Profit]
+    
+
+    RETURN 
+    IF(VProfit>0,VProfit,0)
+
+
+  9. Total Discount = SUM(financials[Discounts]) 
+
+  10. Total Profit = [Net Sales] - [Cost Goods Sold]
